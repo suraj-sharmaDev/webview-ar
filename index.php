@@ -17,10 +17,11 @@ recognition.interimResults = true;
 let p=document.getElementById("subtitle");
 let msg="";
 recognition.addEventListener('result', e => {
-	let transcript = Array.from(e.results)
+	const transcript = Array.from(e.results)
 		.map(result => result[0])
 		.map(result => result.transcript)
-		.join('');
+		.join('')
+
 	console.log(transcript);
 });
 recognition.addEventListener('end', recognition.start);

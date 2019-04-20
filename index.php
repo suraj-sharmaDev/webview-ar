@@ -15,17 +15,13 @@ recognition.continuous = true;
 recognition.interimResults = true;
 
 let p=document.getElementById("subtitle");
-
+var word="";
 recognition.addEventListener('result', e => {
 	const transcript = Array.from(e.results)
 		.map(result => result[0])
-		.map(result => result.transcript)
-
-	if(p.innerHTML.length > 100)
-	{
-		p.innerHTML="";
-	}
-	p.insertAdjacentHTML('beforeend', transcript);	
+		.map(result => result.transcript);
+	word + = transcript;
+	p.innerHTML = word;	
 });
 
 recognition.addEventListener('end', recognition.start);

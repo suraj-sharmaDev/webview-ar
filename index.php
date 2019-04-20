@@ -25,7 +25,7 @@ recognition.addEventListener('result', e => {
 	{
 		p.innerHTML="";
 	}
-	p.innerHTML + = transcript;	
+	p.insertAdjacentHTML('beforeend', transcript);	
 });
 
 recognition.addEventListener('end', recognition.start);

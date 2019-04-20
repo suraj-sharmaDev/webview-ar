@@ -20,7 +20,8 @@ recognition.addEventListener('result', e => {
 	const transcript = Array.from(e.results)
 		.map(result => result[0])
 		.map(result => result.transcript)
-		.join('')
+		.join('');
+    p.innerHTML = transcript;
 	console.log(transcript);
 });
 recognition.addEventListener('end', recognition.start);

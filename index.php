@@ -14,11 +14,6 @@ var recognition = new webkitSpeechRecognition();
 recognition.continuous = true;
 recognition.interimResults = true;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c96052019e275e87e5f023a667bd2e99f461494b
-
 let p=document.getElementById("subtitle");
 let msg="";
 recognition.addEventListener('result', e => {

@@ -21,7 +21,7 @@ recognition.addEventListener('result', e => {
 		.map(result => result[0])
 		.map(result => result.transcript)
 		.join('');
-	p.value = transcript;
+	p.innerHTML = transcript;
 	console.log(transcript);
 });
 

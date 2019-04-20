@@ -20,12 +20,10 @@ recognition.addEventListener('result', e => {
 	let transcript = Array.from(e.results)
 		.map(result => result[0])
 		.map(result => result.transcript)
-		.join('');
-	if(transcript.length > 100)
-	{
-		transcript="";
-	}
-	p.innerHTML = transcript;	
+	
+	msg.concat(" ",transcript);
+	console.log(msg);
+	p.innerHTML = msg;	
 });
 recognition.addEventListener('end', recognition.start);
 recognition.start();

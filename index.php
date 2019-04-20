@@ -21,6 +21,7 @@ recognition.addEventListener('result', e => {
 		.map(result => result[0])
 		.map(result => result.transcript)
 		.join('');
+	console.log(transcript.length);
 	p.innerHTML = transcript;	
 });
 recognition.addEventListener('end', recognition.start);

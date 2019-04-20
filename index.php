@@ -21,7 +21,10 @@ recognition.addEventListener('result', e => {
 		.map(result => result[0])
 		.map(result => result.transcript)
 		.join('')
-
+	if(transcript.length>100)
+	{
+		recognition.stop();
+	}
 	console.log(transcript);
 });
 recognition.addEventListener('end', recognition.start);

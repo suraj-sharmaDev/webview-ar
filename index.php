@@ -12,17 +12,15 @@
 <script>
 var recognition = new webkitSpeechRecognition();
 recognition.continuous = true;
-recognition.interimResults = true;
+recognition.interimResults = false;
 
 let p=document.getElementById("subtitle");
 let msg="";
 recognition.addEventListener('result', e => {
-	const transcript = Array.from(e.results)
-		.map(result => result[0])
-		.map(result => result.transcript)
-		.join('');
-    p.innerText = transcript;
-	console.log(e.results);
+    var last = e.results.length - 1;
+    var final = e.results[last][0].transcript;
+    console.log(final);
+    
 });
 recognition.addEventListener('end', recognition.start);
 recognition.start();

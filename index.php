@@ -8,7 +8,7 @@
         html,body {
             padding: 0;
             margin: 0;
-            height: 100%;
+            height: 97%;
             width:100%;
         }
     .subtitlebox {

@@ -19,7 +19,7 @@ let msg="";
 recognition.addEventListener('result', e => {
     var last = e.results.length - 1;
     var final = e.results[last][0].transcript;
-    console.log(final);
+    p.innerText = final;
     
 });
 recognition.addEventListener('end', recognition.start);

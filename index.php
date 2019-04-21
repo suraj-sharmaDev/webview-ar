@@ -49,7 +49,7 @@
 var video1 = document.querySelector("#videoElement1");
 var video2 = document.querySelector("#videoElement2");
 if (navigator.mediaDevices.getUserMedia) {
-  navigator.mediaDevices.getUserMedia({ video: true })
+  navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } } })
     .then(function (stream) {
       video1.srcObject = stream;
       video2.srcObject = stream;

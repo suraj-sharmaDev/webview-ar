@@ -10,30 +10,41 @@
         height: 375px;
         border: 10px #333 solid;
     }
-    #videoElement {
+    #videoElement1 {
         width: 500px;
         height: 375px;
         background-color: #666;
     }
+    #videoElement2 {
+        width: 500px;
+        height: 375px;
+        background-color: #666;
+    }        
     </style>    
 </head>
 <body>
 <div id="container">
-	<video autoplay="true" id="videoElement">
+	<video autoplay="true" id="videoElement1">
 	
 	</video>
 </div>    
+<div id="container">
+	<video autoplay="true" id="videoElement2">
+	
+	</video>
+</div>        
 <div class="box">
     <p id="subtitle"></p>
 </div>
 </body>
 <script>
-var video = document.querySelector("#videoElement");
-
+var video1 = document.querySelector("#videoElement1");
+var video2 = document.querySelector("#videoElement2");
 if (navigator.mediaDevices.getUserMedia) {
   navigator.mediaDevices.getUserMedia({ video: true })
     .then(function (stream) {
-      video.srcObject = stream;
+      video1.srcObject = stream;
+      video2.srcObject = stream;
     })
     .catch(function (error) {
       console.log("Something went wrong!");

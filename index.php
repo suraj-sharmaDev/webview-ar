@@ -20,12 +20,9 @@
 <body>
 <div id="container">
 	<video autoplay="true" id="videoElement">
-	
+        <p id="subtitle"></p>	
 	</video>
 </div>    
-<div class="box">
-    <p id="subtitle"></p>
-</div>
 </body>
 <script>
 var video = document.querySelector("#videoElement");

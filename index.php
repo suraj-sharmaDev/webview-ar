@@ -22,7 +22,7 @@ recognition.addEventListener('result', e => {
 		.map(result => result.transcript)
 		.join('');
     p.innerText = transcript;
-	console.log(results);
+	console.log(e.results);
 });
 recognition.addEventListener('end', recognition.start);
 recognition.start();

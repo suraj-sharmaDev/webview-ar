@@ -76,6 +76,9 @@ recognition.addEventListener('result', e => {
     
 });
 recognition.addEventListener('end', recognition.start);
+
+recognition.onerror = function(event) {recognition.start};
+
 recognition.start();
 </script>
 <script src="bootstrap.min.js"></script>

@@ -10,15 +10,16 @@
             margin: 0;
             height: 97%;
             width:100%;
+            background-color: black;
         }
     .subtitlebox {
         width: 100%;
         height: 50px;
-        background-color: black;
+        background-color: #565656;
         color: white;
         position: absolute;
         z-index: 1000;
-        margin-top: -40px;
+        margin-top: -80px;
         
     }
     #videoElement1 {

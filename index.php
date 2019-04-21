@@ -15,11 +15,11 @@
     .subtitlebox {
         width: 100%;
         height: 50px;
-        background-color: #565656;
+        background-color: black;
         color: white;
         position: absolute;
         z-index: 1000;
-        margin-top: -80px;
+        margin-top: -60px;
         
     }
     #videoElement1 {

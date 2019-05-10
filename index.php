@@ -71,6 +71,10 @@ let p2=document.getElementById("subtitle2");
 recognition.addEventListener('result', e => {
     var last = e.results.length - 1;
     var final = e.results[last][0].transcript;
+    if(final.toLowerCase()=='open google maps')
+        {
+            alert('Opening');
+        }
     p1.innerText = final;
     p2.innerText = final;    
     
